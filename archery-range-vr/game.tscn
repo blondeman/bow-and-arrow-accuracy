@@ -2,12 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bwph3k1m4p0aa" path="res://Game.gd" id="1_80nbo"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_80nbo"]
-radius = 0.1
-height = 0.2
-radial_segments = 8
-rings = 4
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_80nbo"]
 sky_top_color = Color(0.5278733, 0.69195986, 0.9845714, 1)
 sky_curve = 0.019411175
@@ -21,6 +15,15 @@ sky_material = SubResource("ProceduralSkyMaterial_80nbo")
 background_mode = 2
 sky = SubResource("Sky_e2o6t")
 
+[sub_resource type="QuadMesh" id="QuadMesh_80nbo"]
+size = Vector2(5, 5)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_e2o6t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_feb5d"]
+size = Vector3(1, 2, 1)
+
 [node name="Game" type="Node3D" unique_id=416378783]
 script = ExtResource("1_80nbo")
 
@@ -33,18 +36,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
 tracker = &"left_hand"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/LeftHand" unique_id=1564828163]
-mesh = SubResource("SphereMesh_80nbo")
-
 [node name="RightHand" type="XRController3D" parent="XROrigin3D" unique_id=2099802107]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/RightHand" unique_id=450359723]
-mesh = SubResource("SphereMesh_80nbo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1288299005]
 environment = SubResource("Environment_feb5d")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=839200616]
 transform = Transform3D(-0.5474172, 0.74541533, -0.38038182, 0, 0.45453474, 0.8907291, 0.83685994, 0.48760045, -0.24882014, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1308102294]
+
+[node name="floor" type="MeshInstance3D" parent="Node3D" unique_id=453275474]
+mesh = SubResource("QuadMesh_80nbo")
+
+[node name="cube" type="MeshInstance3D" parent="Node3D" unique_id=1236695062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, -2)
+mesh = SubResource("BoxMesh_e2o6t")
+
+[node name="cube2" type="MeshInstance3D" parent="Node3D" unique_id=1654302514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+mesh = SubResource("BoxMesh_feb5d")
