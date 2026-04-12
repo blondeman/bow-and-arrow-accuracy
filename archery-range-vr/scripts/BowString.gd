@@ -1,4 +1,5 @@
 @tool
+class_name BowString
 extends Area3D
 
 @export var mesh_instance: MeshInstance3D:
