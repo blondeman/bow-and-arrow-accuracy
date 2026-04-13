@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crwxgwh3q4bkc"]
 
-[ext_resource type="Script" uid="uid://cuv8cndpjnics" path="res://scenes/Target.gd" id="1_b37e2"]
+[ext_resource type="Script" uid="uid://cuv8cndpjnics" path="res://scripts/Target.gd" id="1_b37e2"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2b72u"]
 height = 0.2

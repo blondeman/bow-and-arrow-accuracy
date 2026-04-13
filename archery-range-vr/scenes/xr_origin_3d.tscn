@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bu61l8enx40sw" path="res://scenes/function_hold.tscn" id="2_lnt0p"]
 [ext_resource type="PackedScene" uid="uid://bkdeegb8w3oah" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_fullglove_low.tscn" id="2_ojcpv"]
 [ext_resource type="PackedScene" uid="uid://bq8dx8nmmgpvl" path="res://scenes/bow.tscn" id="3_0t3sa"]
-[ext_resource type="PackedScene" uid="uid://dm0gxqi7g051p" path="res://function_pull.tscn" id="5_j2fxx"]
+[ext_resource type="PackedScene" uid="uid://dm0gxqi7g051p" path="res://scenes/function_pull.tscn" id="5_j2fxx"]
 
 [node name="Player" type="XROrigin3D" unique_id=95447385]
 
